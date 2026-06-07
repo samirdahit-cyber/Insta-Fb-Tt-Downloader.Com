@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samir Dahit | Pro Downloader Hub</title>
+    <style>
+        body { background: #050505; padding: 20px; font-family: 'Arial Black', sans-serif; display: flex; flex-direction: column; align-items: center; }
+        .box { background: #111; padding: 30px; border-radius: 25px; width: 100%; max-width: 400px; text-align: center; margin-bottom: 30px; border: 3px solid #ff00ff; box-shadow: 0 0 25px #ff00ff; }
+        h2 { color: #ffff00; text-shadow: 0 0 10px #ffff00; margin-bottom: 20px; }
+        input { width: 100%; padding: 15px; margin-bottom: 20px; border: 2px solid #ff0000; border-radius: 10px; background: #000; color: #ff0000; text-shadow: 0 0 5px #ff0000; box-sizing: border-box; text-align: center; }
+        button { background: #00ffff; color: #000; border: none; padding: 15px; width: 100%; border-radius: 10px; font-weight: bold; cursor: pointer; text-transform: uppercase; box-shadow: 0 0 15px #00ffff; margin-bottom: 10px; }
+        button:hover { background: #00ff00; box-shadow: 0 0 20px #00ff00; }
+        .result { margin-top: 20px; display: none; }
+        .dl-btn { background: #ff00ff !important; color: #fff !important; }
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h2>FB DOWNLOADER</h2>
+        <input type="text" id="fbLink" placeholder="PASTE FACEBOOK LINK">
+        <button onclick="checkLink('fb')">CHECK LINK</button>
+        <div id="fbResult" class="result">
+            <button class="dl-btn" onclick="goTo('fb')">DOWNLOAD NOW</button>
+        </div>
+    </div>
+
+    <div class="box" style="border-color: #00ff00; box-shadow: 0 0 25px #00ff00;">
+        <h2 style="color: #00ffff; text-shadow: 0 0 10px #00ffff;">INSTA DOWNLOADER</h2>
+        <input type="text" id="instaLink" placeholder="PASTE INSTAGRAM LINK">
+        <button onclick="checkLink('insta')" style="background: #ff00ff; color:#fff;">CHECK LINK</button>
+        <div id="instaResult" class="result">
+            <button class="dl-btn" onclick="goTo('insta')">DOWNLOAD NOW</button>
+        </div>
+    </div>
+
+    <div class="box" style="border-color: #ffff00; box-shadow: 0 0 25px #ffff00;">
+        <h2 style="color: #ff00ff; text-shadow: 0 0 10px #ff00ff;">TIKTOK DOWNLOADER</h2>
+        <input type="text" id="tiktokLink" placeholder="PASTE TIKTOK LINK">
+        <button onclick="checkLink('tiktok')" style="background: #00ff00; color:#000;">CHECK LINK</button>
+        <div id="tiktokResult" class="result">
+            <button class="dl-btn" onclick="goTo('tiktok')">DOWNLOAD NOW</button>
+        </div>
+    </div>
+
+    <div class="box" style="border-color: #ffffff; box-shadow: 0 0 25px #ffffff;">
+        <h2 style="color: #ffffff; text-shadow: 0 0 10px #ffffff; font-size: 20px;">CONTACT DETAILS</h2>
+        <p style="color: #00ffff; margin-bottom: 15px;">NAME: SAMIR HERO</p>
+        <a href="https://wa.me/9779820442753" target="_blank"><button style="background: #25d366; color: #fff;">WHATSAPP US</button></a>
+        <a href="https://t.me/Samir_Eraxx" target="_blank"><button style="background: #0088cc; color: #fff;">TELEGRAM US</button></a>
+    </div>
+
+<script>
+    function checkLink(type) {
+        const link = document.getElementById(type + 'Link').value;
+        if (link.length > 10) document.getElementById(type + 'Result').style.display = 'block';
+        else alert("Bhai, Sahi Link Daalo!");
+    }
+    function goTo(type) {
+        if(type === 'fb') window.open('https://fdownloader.net', '_blank');
+        else if(type === 'insta') window.open('https://fastdl.app/en2', '_blank');
+        else window.open('https://musicaldown.com/en', '_blank');
+    }
+</script>
+
+</body>
+</html>
